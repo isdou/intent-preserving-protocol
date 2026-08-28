@@ -72,7 +72,7 @@ graph TD
 
 ## 🔄 Dual-Loop Co-Evolution (DLCE)
 
-IPP seamlessly complements procedural self-improving agent architectures (e.g., *Anthropic & Warp's Self-Improving Skills* model):
+IPP establishes a vendor-agnostic architecture integrating **Intent Preservation** with **Procedural Self-Improvement**:
 
 ```mermaid
 graph LR
@@ -84,11 +84,11 @@ graph LR
         H4 -->|No| H2
     end
 
-    subgraph OuterLoop["Outer Procedural Loop (Warp / Meta Level)"]
-        W1[Agent Execution Output] --> W2[Human Feedback in PR / Issue with 'Why']
-        W2 --> W3[Observer Agent Analyzes Feedback]
-        W3 --> W4[PR Proposing Patch to SKILL.md]
-        W4 -->|Human Reviews & Merges| W5[Skill Evolves for Next Run]
+    subgraph OuterLoop["Outer Procedural Loop (Skill / Meta Level)"]
+        W1[Agent Execution Output] --> W2[Human Feedback with 'Why']
+        W2 --> W3[Observer Agent Analyzes Failure]
+        W3 --> W4[PR Proposing Patch to Skill/Tool Rule]
+        W4 -->|Human Reviews & Merges| W5[Agent Capability Evolves]
     end
 ```
 

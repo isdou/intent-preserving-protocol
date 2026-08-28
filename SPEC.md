@@ -138,9 +138,9 @@ updated_at: 2026-08-28T13:45:00Z
 
 ---
 
-## 5. Dual-Loop Co-Evolution (DLCE) Integration
+## 5. Dual-Loop Co-Evolution (DLCE) Model
 
-IPP integrates cleanly with procedural self-improving agents (e.g., Anthropic & Warp's *Self-Improving Skills* architecture) by establishing a two-tier co-evolution model:
+IPP defines an architecture integrating **Intent Preservation** with **Procedural Self-Improvement**:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -149,15 +149,15 @@ IPP integrates cleanly with procedural self-improving agents (e.g., Anthropic & 
                                        │
             ┌──────────────────────────┴──────────────────────────┐
             ▼                                                     ▼
-   【Inner Intent Loop (IPP)】                            【Outer Procedural Loop (Warp)】
+   【Inner Intent Loop (IPP)】                            【Outer Procedural Loop】
    Target: Domain Problem & Product Ideas                 Target: Agent Rules & Operational Skills
    Artifact: `docs/ideas/IDEA-*.md`                       Artifact: `.agents/skills/*/SKILL.md`
    Engine: Real-time Human-AI dialogue                    Engine: Scheduled Observer Agent + PRs
-   Governing Rule: `Shaped != Granted`                    Governing Rule: Human Code Review & Merge
+   Governing Rule: `Shaped != Granted`                    Governing Rule: Human Review & Merge
 ```
 
 - **Inner Intent Loop (Domain Level):** Preserves human intent, resolves ambiguity, and prevents unauthorized execution while shaping what to build.
-- **Outer Procedural Loop (Meta Level):** Compounds human feedback (via PR comments/reviews) into file-based Skill definitions, refining how the agent operates.
+- **Outer Procedural Loop (Meta Level):** Compounds human feedback into file-based Skill definitions, refining how the agent operates over time.
 
 ---
 
